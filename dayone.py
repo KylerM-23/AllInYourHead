@@ -781,7 +781,7 @@ class DayOne:
         for i in self.EnemyParty:
             i.reloadHealth('max')
 
-        w.PlaySound("Music/goodandevil.wav" ,w.SND_ASYNC)
+        #w.PlaySound("Music/goodandevil.wav" ,w.SND_ASYNC)
         self.DBattle = Battle(self.win,self.PlayerParty,self.EnemyParty,"background/Firstdreambackground.png", "P", 'D', 'NF')
         wer,var2 = self.DBattle.Fight()
         self.PYR.IncreaseEXP(var2)
