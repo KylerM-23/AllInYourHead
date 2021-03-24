@@ -67,7 +67,7 @@ class DayOne:
         self.PlayerParty = [self.PYR]
 
     def intro(self):
-        w.PlaySound("Music/Mystica.wav" , w.SND_ASYNC)
+        #w.PlaySound("Music/Mystica.wav" , w.SND_ASYNC)
         self.screen.drawScreen('background/introlivingroom.png',['charpic/Chuck.png'],'???')
         self.text.text("This is nice isn't it Todd?")
 
@@ -106,7 +106,7 @@ class DayOne:
         self.text.text("I knew we had school, so I didn't add much to them.")
         self.text.text("It shouldn't even get us...")
 
-        w.PlaySound("Soundeffects/glassshatter.wav" , w.SND_ASYNC)
+        #w.PlaySound("Soundeffects/glassshatter.wav" , w.SND_ASYNC)
 
         self.text.text("Dammit, I will go up and check on him.")
 
@@ -121,18 +121,18 @@ class DayOne:
         self.text.text("They are on their way.")
         self.text.text("Where is he?")
         
-        w.PlaySound("Soundeffects/sirens.wav" , w.SND_ASYNC)
+        #w.PlaySound("Soundeffects/sirens.wav" , w.SND_ASYNC)
         
         self.screen.updateScreen('',['charpic/Chuck.png'],'Chuck')
         self.text.text("Outside...")
 
-        w.PlaySound(None, w.SND_PURGE)
+        #w.PlaySound(None, w.SND_PURGE)
 
         self.screen.undrawScreen()
 
 
     def news(self):
-        w.PlaySound("Music/goodbye.wav" , w.SND_ASYNC)
+        #w.PlaySound("Music/goodbye.wav" , w.SND_ASYNC)
         self.screen.drawScreen('background/newsintro.png',['charpic/Reporter.png'],'Reporter')
         self.text.text("We bring your attention to breaking news.")
         self.text.text("A high school boy has been found dead after an apparant suicude.")
@@ -152,7 +152,7 @@ class DayOne:
         self.screen.updateScreen('',[self.MOM.getPicture()],self.MOMName)
         self.text.text("Just go to bed, we can talk about it tomorrow.")
 
-        w.PlaySound("Music/goodandevil.wav" , w.SND_ASYNC)
+        #w.PlaySound("Music/goodandevil.wav" , w.SND_ASYNC)
 
         self.screen.updateScreen('background/Firstdreambackground.png',["charpic/PYRMind.png"],"Your Mind") 
         self.text.text('You go to bed and wake up somewhere odd.')
@@ -174,10 +174,10 @@ class DayOne:
         self.text.doubleText("The only problem is that you are beginning to wake up ","and I won't be able to talk to you until you fall asleep.")
         
         self.screen.undrawScreen()
-        w.PlaySound(None, w.SND_PURGE)
+        #w.PlaySound(None, w.SND_PURGE)
 
     def morn(self):
-        w.PlaySound("Music/NYclub.wav" ,w.SND_ASYNC)
+        #w.PlaySound("Music/NYclub.wav" ,w.SND_ASYNC)
         self.screen.drawScreen('background/bedroom.png',["charpic/PYRMind.png"],'Your Mind')
         self.text.text("You woke up sweating from your strange dream.")
         self.text.text("Something doesn't feel right, but you are going to have to ignore it and head to school.")
@@ -333,7 +333,7 @@ class DayOne:
             self.screen.updateScreen('',["charpic/IBARight.png"],self.IBAName)
             self.text.text("I guess we go into the harder math class, but I think we can handle it.")
 
-        w.PlaySound("Music/goodandevil.wav" , w.SND_ASYNC)
+        #w.PlaySound("Music/goodandevil.wav" , w.SND_ASYNC)
         self.screen.updateScreen('',[self.PYR.getPicture()],self.PYRName)
         self.text.text("I'm not feeling so good.")
         
@@ -356,7 +356,7 @@ class DayOne:
         self.screen.undrawScreen()
 
     def nurseoffice(self):
-        w.PlaySound("Music/NYclub.wav" , w.SND_ASYNC)
+        #w.PlaySound("Music/NYclub.wav" , w.SND_ASYNC)
         self.screen.drawScreen('background/schoolnurse.png',["charpic/PYRMind.png"],'Your Mind')
         self.text.text("You wake up in the nurses office with Connor near you.")
         
@@ -426,7 +426,7 @@ class DayOne:
         self.screen.undrawScreen()
     
     def gangedup(self):
-        w.PlaySound("Music/Shadows.wav" ,w.SND_ASYNC)
+        #w.PlaySound("Music/Shadows.wav" ,w.SND_ASYNC)
         self.screen.drawScreen("background/Park.png",["charpic/PYRMind.png"],"Your Mind")
         self.text.text("While walking home through a park three men come up to you.")
        
@@ -475,7 +475,7 @@ class DayOne:
         loadingscreen.draw(self.win)
 
     def dreamworld(self):
-        w.PlaySound("Music/sexpest.wav" ,w.SND_ASYNC)
+        #w.PlaySound("Music/sexpest.wav" ,w.SND_ASYNC)
         self.screen.drawScreen('background/Firstdreambackground.png',["charpic/PYRMind.png"],"Your Mind")
         self.text.text("Wow that didn't go well. They knocked us out.")
        
@@ -654,7 +654,7 @@ class DayOne:
         for i in self.PlayerParty:
             i.reloadHealth('max')
             
-        w.PlaySound("Music/lastmanstanding.wav" ,w.SND_ASYNC)
+        #w.PlaySound("Music/lastmanstanding.wav" ,w.SND_ASYNC)
         self.DBattle = Battle(self.win,self.PlayerParty,self.EnemyParty,"background/Firstdreambackground.png", "P", 'D', 'NF')
         outcome,var2 = self.DBattle.Fight()
         self.PYR.IncreaseEXP(var2)
